@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import UserService from "../services/user.service";
+import Dropzone from "../Dropzone";
 
 export default class BoardUser extends Component {
   constructor(props) {
@@ -37,6 +38,7 @@ export default class BoardUser extends Component {
         <header className="jumbotron">
           <h3>{this.state.content}</h3>
         </header>
+        <Dropzone onDrop={this.onDrop} accept={"text/csv"}/>
       </div>
     );
   }
